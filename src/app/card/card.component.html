@@ -1,0 +1,13 @@
+
+<div class="card">
+    <div class="card-header">Student Info</div>
+    <div class="card-body">
+      <ul *ngIf="info.length">
+        <li>Name: {{info[0].Name}}</li>
+        <li>Degree: {{info[0].Degree}}</li>
+        <li>College: {{info[0].College}}</li>
+        <li>Location: {{info[0].Location}}</li>
+      </ul>
+    </div>
+    <button (click)="getBack()">back</button>
+  </div>

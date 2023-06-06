@@ -1,0 +1,19 @@
+<form action="" class="form-group">
+    <div class="form-control">
+    <label for="Name">staff Name</label>
+    <input type="text" [(ngModel)]="body.Name" name="Name">
+</div>
+<div class="form-control">
+    <label for="position">staff Position</label>
+    <input type="text" [(ngModel)]="body.position " name="Position">
+</div>
+<div class="form-control">
+    <label for="salary">staff Salary</label>
+    <input type="number" [(ngModel)]="body.salary" name="salary">
+</div>
+<div class="form-control">
+   <input type="button"  (click)="createStaff()" value="submit">
+   <input type="button"   (click)="updateStaff()" value="update">
+
+</div>
+</form>

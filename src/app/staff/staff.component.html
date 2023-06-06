@@ -1,0 +1,22 @@
+
+<div class="staff">
+    <a routerLink="/create">create new</a> 
+
+  </div>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Salary</th>
+      <th>Action</th>
+    </tr>
+    <tbody>
+      <tr *ngFor="let e of list">
+        <td>{{e.Name}}</td>
+        <td>{{e.position}}</td>
+        <td>{{e.salary}}</td>
+        <td><button (click)="deleteStaff(e.id)" >delete</button>
+          <button (click)="edit (e.id)">edit</button></td>
+      </tr>
+    </tbody>
+  </table>

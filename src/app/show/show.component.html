@@ -1,0 +1,52 @@
+<!-- <a (click)="Hide()">Register New</a>  -->
+
+<!-- <table [style.display]="table"> -->
+
+    <form >
+        <label for="Name">Student Name:</label>
+        <input type="text"  [(ngModel)]="body.Name" name="companyName"> <br>
+        
+        <label for="Degree">Degree:</label>
+        <input type="text" name="address" [(ngModel)]="body.Degree" required> <br>
+        
+        <label for="College">College:</label>
+        <input type="text"  [(ngModel)]="body.College" name="College"  ><br>
+        <label for="Location">Location:</label>
+        <input type="text" [(ngModel)]="body.Location" name="Location"> <br>
+      <div class="button">
+        <input type="button" *ngIf="!isDisable" (click)="createStudent()" value="Submit">
+        <input type="button" *ngIf="isDisable" (click)="updateStudent()" value="update" class="btn2" >
+        <input type="button" (click)="resetForm()" value="clear" >
+    </div>
+      </form>
+      <hr>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Degree</th>
+            <th>College</th>
+            <th>Location</th>
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of list">
+            <td> {{e.Name}}</td>
+           <td>{{e.Degree}}</td>  
+           <td>{{e.College}}</td>  
+           <td>{{e.Location}}</td>  
+
+           <td><button (click)="deleteStudent(e.id)" class="btn">Delete</button>
+            <button (click)="show(e.id)">Show</button>
+
+            <button (click)="edit(e.id)" class="btn1">edit</button>
+        
+        </td>
+    </tbody>
+    <button (click)="getBack()">Back</button>
+
+</table>
+<!-- <app-form></app-form> -->
+
